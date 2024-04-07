@@ -1,0 +1,10 @@
+Git Commands
+
+
+git clone https://github.com/Safwanashraf/dummy-2.git
+cd dummy-2
+git add index.html
+git add readme2.txt
+git commit -m "Added 2nd Readme File"
+git status
+git push origin main
