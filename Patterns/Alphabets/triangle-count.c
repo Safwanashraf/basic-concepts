@@ -2,11 +2,12 @@
 
 void main ()
 {
-    int n=5, count=1;
+    int n=5;
     for (int i=1; i<=n; i++){
         for (int j=1; j<=i; j++){
-            printf("%c ", 64 + count);
-            count++;
+            for (int k=1; k<=i; k++){
+                printf("%c ", 64+k);
+            }
         }
         printf("\n");
     }
