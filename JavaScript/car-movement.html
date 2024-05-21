@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ball{
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background-color: red;
+        }
+    </style>
+    <script>
+        var ball = null;
+
+        function init(){
+            ball = document.getElementById("ball");
+            ball.style.position = 'relative';
+            ball.style.left = '0px';
+            ball.style.top = '0px';
+        }
+        function key(e){
+            var key_code = e.which || e.keyCode;
+            if(key_code == 37){
+                ball.style.left = parseInt(ball.style.left) - 10 + 'px';
+            }
+            else if(key_code == 38){
+                ball.style.top = parseInt(ball.style.top) - 10 + 'px';
+            }
+            else if(key_code == 39){
+                ball.style.left = parseInt(ball.style.left) + 10 + 'px';
+            }
+            else if (key_code == 40){
+                ball.style.top = parseInt(ball.style.top) + 10 + 'px';
+            }
+        }
+        window.onload = init;
+    </script>
+</head>
+<body onkeydown="key(event)">        
+    <div id="ball" ></div>
+</body>
+</html>
